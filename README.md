@@ -1,50 +1,39 @@
-# psas-template
-This is sample template for PS Automation Suite.
-***
-### README EXAMPLE
- The readme should contain some of the following:
 
 ## Title
-TODO: Give the automation name.
+# Author : Wesley Dev Andrew
+# Code Name : TimelyFashion
+# Version : 1.0
+
 ## Description
-TODO: Short description of the automation.
+A desktop application to relieve user from the task of calculating efforts spent on different projects, so that they can focus on things that actually matter.
 ## Technologies
-TODO: Give a list of technologies used within the automation code:
-* [Technology name](https://example.com): Version 0.1
+Powershell
 
 ## Prerequisites
-TODO: This section lists frameworks/libraries needed before installing the automation and how to install the frameworks/libraries.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-## Idempotency
-TODO: Give Idempotency details.
-## Installation Instructions
-TODO: This section describes a step by step guide that will tell user how to get the development environment up and running.
+# Requirement1 : MS Powershell
+# Requirement2 : Output of the command "Get-ExecutionPolicy" should not be "Restricted" in Powershell. If restricted, check for your local process to get enabled.
+# Requirement3 : Windows 10 or 11 where "Multiple Desktops" feature is enabled. Please refer Microsoft article for more information on how to use multiple desktops. https://support.microsoft.com/en-us/windows/configure-multiple-desktops-in-windows-36f52e38-5b4a-557b-2ff9-e1a60c976434
+# Requirement3 : In powershell if not already available please install the module > Install-Module -Name VirtualDesktop
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-2. And so on.
-    ```sh
-   ```
+# Fixed issue1 : This program now takes into account idle time so that any idle time beyond 60 seconds is ignored (Hence total of calculated utilization duration may be less than the program runtime duration).
 
-## Functions
-TODO: Give description regarding the functions in the code. Can elaborate further on:
-- Parameters
-## FAQs
-TODO: Give a list of questions and answers related to automation.
+# Limitation1 : Only MS Windows for now because of powershell.  
+# Limitation2 : Not of this tool but some applications like PDF readers dont work well with multiple virtual desktops. With some workarounds, it is possible to create separate windows of same application in multiple desktops. We shall add a tips section later to documentation.
 
-&nbsp;
-&nbsp;
-&nbsp;
-***
+# Planned Improvement1 : Need to scale the program to prepare weekly and monthly reports.
+# Planned Improvement2 : Replace some hardcoded values like endtime, outputpath with variables that can be recieved as input parameters during next phase of Testing and optimization
+# Planned Improvement3 : More user friendly documentation.
+# Planned Improvement4 : Better graph in Excel
+# Planned Improvement5 : Need to automate Multiple Desktop Initialization wizard to assist new users.
+# Planned Improvement6 : Need to migrate to platform independant coding to accommodate other operating systems like MacOS and Linux.
+# Planned Improvement7 : Try to provide a Heads-Up Display on live status of work hours spent to help plan remaining time of day accordingly or to better accomplish time goals.
+
+# Feedbacks : Please feel free to send in your valuable feedbacks to wesley.andrew@dell.com
+
 ### REPOSITORY STRUCTURE
 
 ### Branches
-
+# At this point TimelyFashion.ps1 is the only file that needs to be executed directly from powershell prompt. No other dependancy project files.
 - main/master - Main branch with the latest and greatest release of the automation scripts.
 
 - development - Development and iteration branch to allow the addition of features on and off the branch.
@@ -55,6 +44,7 @@ TODO: Give a list of questions and answers related to automation.
 
 
 ### File Structure
+# At this point TimelyFashion.ps1 is the only file that needs to be executed directly from powershell prompt. No other dependancy project files.
 
 - The Root: The root should be reserved for configuration files, initial documentation (such as README.md and others). Also, it can contain VS solution files and git files.
 
